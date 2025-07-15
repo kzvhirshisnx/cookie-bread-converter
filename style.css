@@ -1,0 +1,107 @@
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: #fff8e1;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: #4e342e;
+}
+
+.container {
+  max-width: 700px;
+  margin: 30px auto;
+  background: #fff3e0;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  color: #6d4c41;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 16px;
+  width: 80%;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  resize: vertical;
+  height: 80px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #ffb74d;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #ffa726;
+}
+
+#result {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+ul {
+  text-align: left;
+  display: inline-block;
+  margin: 10px auto;
+  padding-left: 20px;
+}
+
+.section {
+  margin-top: 40px;
+}
+
+footer {
+  margin-top: 50px;
+  font-size: 14px;
+  color: #a1887f;
+}
+
+.photo {
+  width: 45%;
+  margin: 10px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.animate {
+  animation: pop 2s ease-in-out infinite alternate;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.03); }
+}
+
+.background-emojis {
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+  width: 100%;
+  background: #ffecb3;
+  padding: 8px 0;
+  z-index: 0;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.confirmation {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+}
