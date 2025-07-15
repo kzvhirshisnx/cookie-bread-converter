@@ -28,18 +28,25 @@ function sendRequest(event) {
 
   const subject = encodeURIComponent("Banana Bread Cookie Offer");
   const body = encodeURIComponent(
-    `Hi Jenny,
-
-My name is ${name} and I would like to offer ${offer} cookie(s) for banana bread.
-
-Here's my cookie description:
-${description}
-
-Looking forward to hearing from you! 🍪💕`
+    `Hi Jenny,\n\nMy name is ${name} and I would like to offer ${offer} cookie(s) for banana bread.\n\nHere's my cookie description:\n${description}\n\nLooking forward to hearing from you! 🍪💕`
   );
 
   document.getElementById("confirmation").innerText = "Your message is ready! It will open in your email client ✉️";
   setTimeout(() => {
     window.location.href = `mailto:hugginnews@gmail.com?subject=${subject}&body=${body}`;
   }, 1000);
+}
+
+function submitReview(event) {
+  event.preventDefault();
+  const reviewer = document.getElementById("reviewer").value;
+  const reviewText = document.getElementById("reviewText").value;
+
+  const newReview = document.createElement("div");
+  newReview.className = "review";
+  newReview.innerHTML = `<strong>${reviewer} says:</strong><p>${reviewText}</p>`;
+  document.getElementById("reviews").prepend(newReview);
+
+  document.getElementById("reviewForm").reset();
+  document.getElementById("reviewConfirmation").innerText = "Thanks for your sweet review! 💌";
 }
