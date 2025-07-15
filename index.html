@@ -12,8 +12,8 @@
     <h1 class="animate">🍪 Cookie ➡️ Banana Bread Exchange 🍌</h1>
     <p>12 cookies = 1 loaf of banana bread</p>
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Chocolate_chip_cookies.jpg/800px-Chocolate_chip_cookies.jpg" alt="cookies" class="photo">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Banana_bread_loaf.jpg/800px-Banana_bread_loaf.jpg" alt="banana bread" class="photo">
+    <img src="https://cdn.pixabay.com/photo/2014/12/21/23/28/cookie-575835_1280.png" alt="cookies" class="photo">
+    <img src="https://cdn.pixabay.com/photo/2020/11/06/12/38/banana-bread-5719401_1280.jpg" alt="banana bread" class="photo">
 
     <div class="section">
       <label for="cookies">Enter how many cookies you would like to offer Jenny:</label><br>
@@ -31,6 +31,17 @@
         <button type="submit">📧 Email Jenny</button>
         <div id="confirmation" class="confirmation"></div>
       </form>
+    </div>
+
+    <div class="section">
+      <h2>🌟 Leave a Review for Jenny</h2>
+      <form id="reviewForm" onsubmit="submitReview(event)">
+        <input type="text" id="reviewer" placeholder="Your name" required /><br>
+        <textarea id="reviewText" placeholder="What did you think of the banana bread?" required></textarea><br>
+        <button type="submit">📤 Submit Review</button>
+      </form>
+      <div id="reviewConfirmation" class="confirmation"></div>
+      <div id="reviews" class="reviews"></div>
     </div>
 
     <div class="section recipe">
